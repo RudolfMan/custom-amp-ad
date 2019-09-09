@@ -29,7 +29,14 @@
   <body>
     <h1>Welcome to the mobile web</h1>
 
-    <amp-ad width=300 height=250 type="foo" src="https://rudmanusachi.github.io/custom-amp-ad/ad.html">
+    <amp-ad width=300 height=250
+      type="foo"
+      data-url="https://rudmanusachi.github.io/custom-amp-ad/display-ad.json">
+      <template type="amp-mustache" id="amp-template-id">
+        <a href="{{href}}">
+          <amp-img layout='fixed' height="200" width="200" src="{{src}}" data-info="{{info}}"></amp-img>
+        </a>
+      </template>
       <div placeholder>Loading ...</div>
     </amp-ad>
 
